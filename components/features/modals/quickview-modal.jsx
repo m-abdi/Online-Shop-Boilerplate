@@ -1,21 +1,19 @@
-import Modal from 'react-modal';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+
+import DetailOne from '~/components/partials/product/details/detail-one';
+import { GET_PRODUCT } from '~/server/queries';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Magnifier } from 'react-image-magnifiers';
-import { useRouter } from 'next/router';
-import { useQuery } from '@apollo/react-hooks';
-
+import Modal from 'react-modal';
 import OwlCarousel from '~/components/features/owl-carousel';
-import DetailOne from '~/components/partials/product/details/detail-one';
-
-import withApollo from '~/server/apollo';
-import { GET_PRODUCT } from '~/server/queries';
-
+import { connect } from 'react-redux';
 import { actions as demoAction } from '~/store/demo';
-import React, { useState, useEffect } from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { useRouter } from 'next/router';
+import withApollo from '~/server/apollo';
 
 const customStyles = {
-    overlay: {
+    overlay: {  
         backgroundColor: 'rgba(51,51,51,0.6)',
         zIndex: '9000'
     }

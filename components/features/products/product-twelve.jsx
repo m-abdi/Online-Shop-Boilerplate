@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { connect } from 'react-redux';
+import React, { useEffect, useRef, useState } from 'react';
+import { isInCompare, isInWishlist } from '/utils';
+
+import ALink from '/components/features/alink';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import ALink from '~/components/features/alink';
-
-import { actions as wishlistAction } from '~/store/wishlist';
-import { actions as cartAction } from '~/store/cart';
-import { actions as compareAction } from '~/store/compare';
-import { actions as demoAction } from '~/store/demo';
-
-import { isInWishlist, isInCompare } from '~/utils';
+import { actions as cartAction } from '/store/cart';
+import { actions as compareAction } from '/store/compare';
+import { connect } from 'react-redux';
+import { actions as demoAction } from '/store/demo';
+import { useRouter } from 'next/router';
+import { actions as wishlistAction } from '/store/wishlist';
 
 function ProductTwelve ( props ) {
     const router = useRouter();

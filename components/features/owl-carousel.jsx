@@ -1,46 +1,79 @@
-import React, { useRef, useEffect } from 'react';
-import Carousel from 'react-owl-carousel2';
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselElement,
+  MDBCarouselInner,
+  MDBCarouselItem,
+} from "mdb-react-ui-kit";
+import React, { memo } from "react";
 
-function OwlCarousel ( props ) {
-    const { adClass, options, events, isTheme = true } = props;
-    const carouselRef = useRef( null );
-    const defaultOptions = {
-        items: 1,
-        loop: false,
-        margin: 0,
-        responsiveClass: "true",
-        nav: true,
-        navText: [ '<i class="icon-angle-left">', '<i class="icon-angle-right">' ],
-        dots: true,
-        smartSpeed: 400,
-        autoplay: false,
-        responsive: {
-            320: {
-                nav: false
-            },
-            375: {
-                nav: false
-            }
-        }
-    };
+import ALink from "./alink";
+import { Reveal } from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
-    useEffect( () => {
-        if ( props.onChangeRef ) {
-            props.onChangeRef( carouselRef );
-        }
-    }, [ carouselRef ] );
+const fadeInUpShorter = keyframes`
+from {
+    opacity: 0;
+    transform: translate(0,50px);
+    transform-origin: 0 0;
+}
+to {
+    opacity:1;
+    transform:none
+}`;
+function App() {
+  return (
+    <MDBCarousel showIndicators>
+      <MDBCarouselInner>
+        <MDBCarouselItem className="active">
+          <MDBCarouselElement
+            src="/public/images/home/sliders/slide-1.jpg"
+            alt="banner"
+          />
+          <MDBCarouselCaption>
+            <Reveal keyframes={fadeInUpShorter} delay={100} duration={1000}>
+              <>
+                <h3 className="intro-subtitle">Deals and Promotions</h3>
+                <h1 className="intro-title text-white">
+                  Sneakers & Athletic Shoes
+                </h1>
 
-    let settings = Object.assign( {}, defaultOptions, options );
+                <div className="intro-price text-white">from $9.99</div>
 
-    return (
-        props.children !== undefined ?
-            props.children.length > 0 || ( props.children && props.children.length === undefined ) ?
-                <Carousel ref={ carouselRef } className={ `owl-carousel ${isTheme ? 'owl-theme' : ''} ${adClass}` } options={ settings } events={ events }>
-                    { props.children }
-                </Carousel >
-                : ""
-            : ""
-    );
+                <ALink
+                  href="/shop/sidebar/list"
+                  className="btn btn-white-primary btn-round"
+                >
+                  <span>SHOP NOW</span>
+                  <i className="icon-long-arrow-right"></i>
+                </ALink>
+              </>
+            </Reveal>
+          </MDBCarouselCaption>
+        </MDBCarouselItem>
+        <MDBCarouselItem>
+          <MDBCarouselElement
+            src="https://mdbcdn.b-cdn.net/img/new/slides/042.jpg"
+            alt="..."
+          />
+          <MDBCarouselCaption>
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </MDBCarouselCaption>
+        </MDBCarouselItem>
+        <MDBCarouselItem>
+          <MDBCarouselElement
+            src="https://mdbcdn.b-cdn.net/img/new/slides/043.jpg"
+            alt="..."
+          />
+          <MDBCarouselCaption>
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </MDBCarouselCaption>
+        </MDBCarouselItem>
+      </MDBCarouselInner>
+    </MDBCarousel>
+  );
 }
 
-export default React.memo( OwlCarousel );
+export default memo(App);

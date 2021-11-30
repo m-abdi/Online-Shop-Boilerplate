@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Hezareh";
+  src: url("/fonts/Heza/Si47ash Hezareh.woff2") format("woff2"),
+    url("/fonts/Heza/Si47ash Hezareh.woff") format("woff"),
+    url("/fonts/Heza/Si47ash Hezareh.ttf") format("truetype"),
+    url("/fonts/Heza/Si47ash Hezareh.otf") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hezareh";
+  src: url("/fonts/Heza/Si47ash Hezareh Bold.woff2") format("woff2"),
+    url("/fonts/Heza/Si47ash Hezareh Bold.woff") format("woff"),
+    url("/fonts/Heza/Si47ash Hezareh Bold.ttf") format("truetype"),
+    url("/fonts/Heza/Si47ash Hezareh Bold.otf") format("embedded-opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+

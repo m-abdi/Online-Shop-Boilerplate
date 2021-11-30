@@ -3,16 +3,29 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.5.5",
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.2.0",
+    "@mui/lab": "^5.0.0-alpha.58",
     "@mui/material": "latest",
+    "@reduxjs/toolkit": "^1.6.2",
     "clsx": "latest",
+    "graphql": "^16.0.1",
+    "mdb-react-ui-kit": "^2.0.0",
     "next": "latest",
     "react": "latest",
     "react-awesome-reveal": "^3.8.1",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-flickity-component": "^3.6.2",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-redux": "^7.2.6",
+    "react-reveal": "^1.2.2",
+    "react-tabs": "^3.2.3",
+    "stylis": "^4.0.10",
+    "stylis-plugin-rtl": "^2.1.1"
   },
   "scripts": {
     "dev": "next",
@@ -21,6 +34,7 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.0.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

@@ -1,13 +1,15 @@
 import * as React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+
+import createEmotionCache from '../src/createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../src/theme';
-import createEmotionCache from '../src/createEmotionCache';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="fa" dir="rtl">
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />

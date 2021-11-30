@@ -1,8 +1,15 @@
+import type {} from '@mui/lab/themeAugmentation';
+
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
 const theme = createTheme({
+  direction: "rtl",
+  typography: {
+    fontFamily: "Hezareh",
+    fontSize: 15
+  },
   palette: {
     primary: {
       main: '#556cd6',
