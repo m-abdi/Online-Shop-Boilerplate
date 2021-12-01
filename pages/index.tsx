@@ -11,8 +11,9 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Copyright from "../src/Copyright";
 import Flickity from "react-flickity-component";
-import Footer from "../components/partials/footer/footer"
+import Footer from "../components/partials/footer/footer";
 import { GET_HOME_DATA } from "../server/queries";
+import Header from '../components/partials/header/header'
 import Image from "next/image";
 import Link from "../src/Link";
 import MostWantedCollection from "../components/partials/home/new-collection";
@@ -23,16 +24,23 @@ import ProductCard from "../components/myfeutures/product-card";
 import ProductCarousel from "../components/myfeutures/products/product-carousel";
 import React from "react";
 import Reveal from "react-awesome-reveal";
-import TopCollection from '../components/partials/home/top-collection'
+import TopCollection from "../components/partials/home/top-collection";
+import Trend from "../components/partials/home/trend";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "@apollo/client";
 
 export default function Index() {
   return (
     <>
-      <TopCollection />
-      <MostWantedCollection/>
-      <Footer/>
+      <Header/>
+      <main>
+        <Trend/>
+        <TopCollection />
+        <MostWantedCollection />
+      </main>
+      <footer>
+      <Footer />
+      </footer>
     </>
   );
 }
