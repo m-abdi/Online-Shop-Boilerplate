@@ -1,4 +1,3 @@
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "../public/css/flickity.min.css";
 import "../public/css/fonts-hezareh.css";
 

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import IIC from "../../public/images/quick-view.svg";
+import IIC from "public/images/quick-view.svg";
 import { SvgIcon } from "@mui/material";
 
 function QuickView() {

@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import { TabContext } from "@mui/lab";
 import TabPanel from '@mui/lab/TabPanel';
 import Tabs from "@mui/material/Tabs";
-import TwelveProducts from "../../myfeutures/products/product-twelve";
+import TwelveProducts from "../../features/products/product-twelve";
 
 export default function MostWantedCollection() {
   const [value, setValue] = React.useState("1");

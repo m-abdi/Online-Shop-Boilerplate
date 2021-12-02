@@ -7,6 +7,7 @@ import {
 } from "../utils/data";
 
 import ALink from "../components/features/alink";
+import Banner from "../components/partials/home/banner";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Copyright from "../src/Copyright";
@@ -20,7 +21,7 @@ import MostWantedCollection from "../components/partials/home/new-collection";
 import NewCollection from "../components/partials/home/new-collection";
 import OwlCarousel from "../components/features/owl-carousel";
 import ProTip from "../src/ProTip";
-import ProductCard from "../components/myfeutures/product-card";
+import ProductCard from "../components/features/products/product-card";
 import ProductCarousel from "../components/myfeutures/products/product-carousel";
 import React from "react";
 import Reveal from "react-awesome-reveal";
@@ -35,6 +36,7 @@ export default function Index() {
       <Header/>
       <main>
         <Trend/>
+        <Banner/>
         <TopCollection />
         <MostWantedCollection />
       </main>

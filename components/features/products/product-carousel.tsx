@@ -1,6 +1,7 @@
+import { ProductInfo, PropsType } from "../../../Types/Types";
+
 import Flickity from "react-flickity-component";
-import ProductCard from "../product-card";
-import { PropsType } from "../../../Types/Types";
+import ProductCard from "./product-card";
 import React from "react";
 
 const flickityOptions = {
@@ -18,7 +19,7 @@ function ProductCarousel(props: PropsType) {
       reloadOnUpdate // default false
       static // default false
     >
-      {props.items.map((product) => (
+      {props.items.map((product: ProductInfo) => (
         <ProductCard
           info={product}
         />

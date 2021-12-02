@@ -22,7 +22,9 @@ const shopingCartSlice = createSlice({
       state.items.push(action.payload);
     },
     removeFromCard: (state, action: PayloadAction<ProductInfo>) => {
-      state.items = state.items.filter((element) => element.id != action.payload.id);
+      state.items = state.items.filter((element) =>
+        element.id != action.payload.id
+      );
     },
   },
 });
@@ -30,7 +32,9 @@ const shopingCartSlice = createSlice({
 // Check Product to be in the shopingCart
 export const selectProductById = (state: RootState, productId: number) => {
   if (state.shopingCart.items) {
-    return state.shopingCart.items.find((product) => product.id === productId);
+    if (state.shopingCart.items.find((product) => product.id === productId)) {
+      return true;
+    } else return false;
   } else {
     return undefined;
   }

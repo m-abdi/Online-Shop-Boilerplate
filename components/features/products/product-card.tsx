@@ -1,28 +1,26 @@
-import { Box, typography } from "@mui/system";
-import { Button, Fade, Modal, SvgIcon, Typography } from "@mui/material";
+import {Fade, Modal, Typography} from "@mui/material";
 import React, { useState } from "react";
 import {
   itemAdded,
   itemRemoved,
   selectProductById,
-} from "../../store/wishlistSlice";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
+} from "../../../store/wishlistSlice";
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 
-import AddToCart from "./AddToCartButton";
+import AddToCart from "../buttons/AddToCartButton";
 import Backdrop from "@mui/material/Backdrop";
 import Bounce from "react-reveal/Bounce";
+import { Box } from "@mui/system";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Container from "@mui/material/Container";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IconButton } from "@mui/material";
 import Image from "next/image";
-import { ProductInfo } from "../../Types/Types";
-import QuickViewIcon from "./QuickViewIcon";
-import styles from "../../public/css/flex-utilities.module.css";
-import zIndex from "@mui/material/styles/zIndex";
+import { ProductInfo } from "../../../Types/Types";
+import QuickViewIcon from "../buttons/QuickViewIcon";
+import styles from "public/css/flex-utilities.module.css";
 
 const style = {
   position: "absolute" as "absolute",
@@ -35,12 +33,12 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-function ProductCard({ info }) {
+
+function ProductCard({ info }: {info: ProductInfo}) {
   const [inWishList, setInWishList] = useState(
     useAppSelector((state) => selectProductById(state, info.id)),
   );
   const [quickViewStatus, setQuickViewStatus] = useState(false);
-  const handleQuickViewOpen = () => setQuickViewStatus(true);
   const handleQuickViewClose = () => setQuickViewStatus(false);
   const [pic, setPic] = useState(info.picture);
   const [hover, setHover] = useState(false)

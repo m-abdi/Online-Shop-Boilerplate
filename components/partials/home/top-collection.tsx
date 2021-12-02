@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Box from "@mui/material/Box";
-import ProductCarousel from "../../myfeutures/products/product-carousel";
+import ProductCarousel from "../../features/products/product-carousel";
 import Tab from "@mui/material/Tab";
 import { TabContext } from "@mui/lab";
 import TabPanel from '@mui/lab/TabPanel';

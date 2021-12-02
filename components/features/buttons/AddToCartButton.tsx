@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 
 import { Button } from "@mui/material";
-import { ProductInfo } from "../../Types/Types";
+import { ProductInfo } from "Types/Types";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { addToCart } from "../../store/shopingCartSlice";
-import { removeFromCard } from "../../store/shopingCartSlice";
-import { selectProductById } from "../../store/shopingCartSlice";
-import { styled } from "@mui/system";
-import { useAppDispatch } from "../../store/hooks";
-import { useAppSelector } from "../../store/hooks";
+import { addToCart } from "store/shopingCartSlice";
+import { removeFromCard } from "store/shopingCartSlice";
+import { selectProductById } from "store/shopingCartSlice";
+import { useAppDispatch } from "store/hooks";
+import { useAppSelector } from "store/hooks";
 
-function AddToCart({ info }) {
+function AddToCart({ info }: {info: ProductInfo }) {
   const [inCard, setInCard] = useState(
     useAppSelector((state) => selectProductById(state, info.id)),
   );
