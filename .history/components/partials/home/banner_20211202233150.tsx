@@ -22,7 +22,7 @@ const BannerBox = styled("div")({
 export default function Banner() {
   const match = useMediaQuery("(max-width: 550px)")
   return (
-    <Box p="30px 60px">
+    <Box>
       <BannerBox>
         <Box sx={{ gridArea: "c", width: 450, height: 240, position:"relative" }}><Image src="/images/home/banners/banner-3.jpg" layout="fill" /></Box>
         <Box sx={{ gridArea: "d", width: 450, height: 240, position:"relative" }}><Image src="/images/home/banners/banner-4.jpg" layout="fill" /></Box>

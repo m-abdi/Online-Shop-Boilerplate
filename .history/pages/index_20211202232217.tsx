@@ -22,6 +22,7 @@ import NewCollection from "../components/partials/home/new-collection";
 import OwlCarousel from "../components/features/owl-carousel";
 import ProTip from "../src/ProTip";
 import ProductCard from "../components/features/products/product-card";
+import ProductCarousel from "../components/myfeutures/products/product-carousel";
 import React from "react";
 import Reveal from "react-awesome-reveal";
 import TopCollection from "../components/partials/home/top-collection";

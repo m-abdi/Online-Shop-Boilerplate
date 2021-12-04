@@ -22,11 +22,11 @@ const BannerBox = styled("div")({
 export default function Banner() {
   const match = useMediaQuery("(max-width: 550px)")
   return (
-    <Box p="30px 60px">
+    <Box>
       <BannerBox>
         <Box sx={{ gridArea: "c", width: 450, height: 240, position:"relative" }}><Image src="/images/home/banners/banner-3.jpg" layout="fill" /></Box>
         <Box sx={{ gridArea: "d", width: 450, height: 240, position:"relative" }}><Image src="/images/home/banners/banner-4.jpg" layout="fill" /></Box>
-        <Box sx={{ gridArea: "a", width: !match?550: "calc(0.9*100vw)", height: !match?500: "calc(0.7*100vw)", position:"relative" }}><Image src="/images/home/banners/banner-1.jpg" layout="fill" /></Box>
+        <Box sx={{ gridArea: "a", width: !match?550: "", height: 500, position:"relative" }}><Image src="/images/home/banners/banner-1.jpg" layout="fill" /></Box>
         <Box sx={{ gridArea: "b", width: 240, height: 500, position:"relative" }}><Image src="/images/home/banners/banner-2.jpg" layout="fill" /></Box>
       </BannerBox>
     </Box>
